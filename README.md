@@ -8,7 +8,7 @@ of the Liturgy of the Hours.
 I am not their author - my own liturgical music for the same purpose
 is in the repository [In adiutorium](https://github.com/igneus/In-adiutorium).
 The resources contained here are either public domain
-or given to me in order to publish it under some free license.
+or given to me in order to publish them under some free license.
 
 ## License
 
