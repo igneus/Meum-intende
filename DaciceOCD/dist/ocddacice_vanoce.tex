@@ -1,0 +1,149 @@
+% LuaLaTeX
+
+\documentclass[a5paper, twoside, 12pt]{article}
+\usepackage[latin]{babel} 
+\usepackage[left=2cm, right=1.5cm, top=2cm, bottom=2cm]{geometry} % okraje stranky
+
+\usepackage{fontspec}
+% \setmainfont{Junicode}
+\setmainfont{Linux Libertine O}
+
+% usual packages loading:
+\usepackage{luatextra}
+\usepackage{graphicx} % support the \includegraphics command and options
+\usepackage{gregoriotex} % for gregorio score inclusion
+\usepackage{gregoriosyms}
+\usepackage[hidelinks]{hyperref} % hypertextove odkazy
+
+\input{macros_ocddacice}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Here we set the space around the initial.
+% Please report to http://home.gna.org/gregorio/gregoriotex/details for more details and options
+\setspaceafterinitial{2.2mm plus 0em minus 0em}
+\setspacebeforeinitial{2.2mm plus 0em minus 0em}
+
+\grespacebeneathtext=30000 sp
+
+% Here we set the initial font. Change 43 if you want a bigger initial.
+\def\greinitialformat#1{%
+{\fontsize{38}{38}\selectfont #1}%
+}
+
+\pagestyle{empty}
+
+\titlePage{slavnost}{Narození Páně}{nápěvy bosých karmelitek Dačice}{Praha 2014}
+
+\cleardoublepage
+
+\pagestyle{plain}
+
+\hourTitle{1. nešpory}
+
+\scoreAnnotation{1. ant.}{8.c}
+\scoreSpaced{gabc/vanoce/ne1_a1.tex}
+
+\scoreAnnotation{2. ant.}{3.a}
+\scoreSpaced{gabc/vanoce/ne1_a2.tex}
+
+\scoreAnnotation{3. ant.}{1.f}
+\scoreSpaced{gabc/vanoce/ne1_a3.tex}
+
+\scoreAnnotation{resp.}{6}
+\scoreSpaced{gabc/vanoce/ne1_r.tex}
+
+\scoreAnnotation{Magnif.}{6}
+\scoreSpaced{gabc/vanoce/ne1_am.tex}
+
+\hourTitle{modlitba se čtením}
+
+\scoreAnnotation{Invit.}{8.G}
+\scoreSpaced{gabc/vanoce/invit.tex}
+
+\scoreAnnotation{1. ant.}{8.G}
+\scoreSpaced{gabc/vanoce/mc_a1.tex}
+
+\scoreAnnotation{2. ant.}{4.A}
+\scoreSpaced{gabc/vanoce/mc_a2.tex}
+
+\scoreAnnotation{3. ant.}{7.d}
+\scoreSpaced{gabc/vanoce/mc_a3.tex}
+
+\hourTitle{ranní chvály}
+
+\scoreAnnotation{1. ant.}{2.D}
+\scoreSpaced{gabc/vanoce/rch_a1.tex}
+
+\scoreAnnotation{2. ant.}{7.d}
+\scoreSpaced{gabc/vanoce/rch_a2.tex}
+
+\scoreAnnotation{3. ant.}{8.G}
+\scoreSpaced{gabc/vanoce/rch_a3.tex}
+
+\scoreAnnotation{resp.}{6}
+\scoreSpaced{gabc/vanoce/rch_r.tex}
+
+\scoreAnnotation{Ben.}{8+2}
+\scoreSpaced{gabc/vanoce/rch_ab.tex}
+
+\hourTitle{modlitba uprostřed dne}
+
+\hourPart{dopoledne}
+
+\scoreAnnotation{ant.}{7.a}
+\scoreSpaced{gabc/vanoce/up_ado.tex}
+
+\hourPart{v poledne}
+
+\scoreAnnotation{ant.}{8.G}
+\scoreSpaced{gabc/vanoce/up_apo.tex}
+
+\pagebreak
+\hourPart{odpoledne}
+
+\scoreAnnotation{ant.}{8.c}
+\scoreSpaced{gabc/vanoce/up_aod.tex}
+
+\hourTitle{2. nešpory}
+
+\scoreAnnotation{1. ant.}{1.g}
+\scoreSpaced{gabc/vanoce/ne2_a1.tex}
+
+\scoreAnnotation{2. ant.}{4.A}
+\scoreSpaced{gabc/vanoce/ne2_a2.tex}
+
+\scoreAnnotation{3. ant.}{1+9}
+\scoreSpaced{gabc/vanoce/ne2_a3.tex}
+
+\scoreAnnotation{resp.}{6}
+\scoreSpaced{gabc/vanoce/ne2_r.tex}
+
+\scoreAnnotation{Mag.}{1.f}
+\scoreSpaced{gabc/vanoce/ne2_am.tex}
+
+\mbox{}
+\vfill
+
+\pagestyle{empty}
+
+\setlength{\parindent}{0pt}
+
+Antifony a responsoria denní modlitby církve\\ 
+pro slavnost Narození Páně.
+
+Nápěvy: komunita bosých karmelitek Dačice
+
+Sazba: Jakub Pavlík
+
+Praha 2014
+
+\vspace{5mm}
+
+Povoluje se šíření, užívání a upravování v souladu s podmínkami
+licence \href{http://creativecommons.org/licenses/by-sa/3.0/deed.cs}{\emph{Creative Commons At\-tri\-bu\-tion-\-Sha\-re-A\-li\-ke 3.0 Unported}}:
+\href{http://creativecommons.org/licenses/by-sa/3.0/deed.cs}{http://creativecommons.org/licenses/by-sa/3.0/deed.cs}
+
+\end{document}

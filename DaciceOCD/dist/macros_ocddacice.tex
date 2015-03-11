@@ -1,0 +1,61 @@
+% chants of the Carmelites Discalced in Dacice
+%
+% common macros
+
+\newcommand{\annotationFont}[1]{\small {\textbf{#1}}}
+
+% annotation to be placed above the chant's initial
+\newcommand{\scoreAnnotation}[2]{%
+  \gresetfirstannotation{\annotationFont{#1}}%
+  \gresetsecondannotation{\annotationFont{#2}}%
+}
+
+\newcommand{\scoreSpaced}[1]{
+  %\vspace{5mm}
+  \includescore{#1}
+  \vspace{5mm}
+}
+
+\newcommand{\hourTitle}[1]{
+  \vspace{5mm}
+  \begin{center}
+    \textbf{#1}
+  \end{center}
+  %\vspace{4mm}
+}
+
+\newcommand{\hourPart}[1]{
+  \begin{center}
+    \emph{#1}
+  \end{center}
+}
+
+\newcommand{\titlePage}[4]{
+  \newgeometry{left=2cm, right=1.5cm, top=2cm, bottom=0.5cm}
+
+  \vspace*{3.5cm}
+
+  \begin{center}
+    {\large #1 } % feast rank
+
+    \vspace{9mm}
+
+    {\Huge #2 } % feast title  
+
+    \vspace{25mm}
+
+    #3 % author
+
+    \vfill
+
+    \includegraphics[height=2cm]{img/ocd_znak_dacice.eps}
+
+    \vspace{5mm}
+
+    #4 % published
+
+    
+  \end{center}
+
+  \restoregeometry
+}
