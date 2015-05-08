@@ -1,0 +1,27 @@
+RUBY_COMMAND = 'ruby' # was: 'ruby1.9.1'
+
+def gregorio(srcf)
+  f2 = srcf.gsub(".gabc", ".tex")
+  file f2 => [srcf] do
+    sh "gregorio #{srcf}"
+  end
+  return f2
+end
+
+def scores(dir)
+  Dir["gabc/#{dir}/*.gabc"].collect {|s| gregorio(s) }
+end
+
+common = ['macros_ocddacice.tex']
+
+file "ocddacice_vanoce.pdf" => ['ocddacice_vanoce.tex'] + common + scores('vanoce') + Dir['img/*.*'] do |t|
+  2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
+end
+
+file "ocddacice_velikonoce.pdf" => ['ocddacice_velikonoce.tex'] + common + scores('velikonoce') + Dir['img/*.*'] do |t|
+  2.times { sh "lualatex -interaction=nonstopmode #{t.prerequisites.first}" }
+end
+
+task :all => ["ocddacice_vanoce.pdf", "ocddacice_velikonoce.pdf"]
+
+task :default => [:all]
